@@ -1,9 +1,9 @@
 import re
 
 
-test_str = "hello world"
+test_str = "hello World"
 # 使用search
-test = re.compile(r"world")
+test = re.compile(r"world", re.I)
 s_rest = test.search(test_str)
 print(s_rest)
 

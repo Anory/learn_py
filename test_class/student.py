@@ -16,7 +16,7 @@ class Person(object):
 class Student(Person):
     # 重写实例对象的构造（初始化）方法，并调用父类构造方法，实现对实例属性的赋值
     def __init__(self, name, gender, score, major, stu_num="2018014002"):
-        super().__init__(name, gender)
+        Person.__init__(self, name, gender)
         self.score = score
         self.major = major
         self.__stu_num = stu_num

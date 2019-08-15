@@ -25,3 +25,10 @@ print(rest2)
 # 使用函数配合正则完成字符串位置调换并修改内容
 rest3 = p2.sub(lambda m: m.group(2).upper() + " " + m.group(1), test_str2)
 print(rest3)
+
+
+tel = "13265988871"
+p3 = re.compile(r"(\d{3})(\d{4})(\d{4})")
+r = p3.sub(r"\2", tel)
+r1 = tel.replace(r, "****")
+print(r1)

@@ -1,8 +1,6 @@
-test_str2 = "hello world"
+import re
 
-
-def f(m):
-    return m.group(2).upper() + " " + m.group(1)
-
-a = f(test_str2)
-print(a)
+p = re.compile(r"OH", re.I)
+r = p.match("oh,ye")
+print(r)
+print(r.string)
